@@ -26,21 +26,21 @@ public class AuthorService implements CRUDService<Author> {
 
     @Override
     public Author getById(int id) {
-        return null;
+        return authorDao.findById(id);
     }
 
     @Override
     public Author create(Author model) {
-        return null;
+        return authorDao.create(model);
     }
 
     @Override
     public Author update(Author model) {
-        return null;
+        return authorDao.update(model);
     }
 
     @Override
     public boolean delete(int id) {
-        return false;
+        return authorDao.delete(id);
     }
 }
