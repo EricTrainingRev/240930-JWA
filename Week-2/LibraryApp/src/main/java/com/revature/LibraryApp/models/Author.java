@@ -1,6 +1,6 @@
 package com.revature.LibraryApp.models;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Author {
     private int authorId;
