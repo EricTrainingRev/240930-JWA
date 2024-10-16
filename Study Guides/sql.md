@@ -85,6 +85,9 @@ alter table simple_table add column person_id serial;
 --rename allows us to change the name of a table
 alter table simple_table rename to renamed_table;
 
+--and the name of a column
+alter table simple_table rename column last_name to surname;
+
 --add a new column to an existing table
 alter table renamed_table add column email varchar(100);
 
