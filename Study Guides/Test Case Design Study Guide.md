@@ -1,5 +1,30 @@
 # Test Case Design Study Guide
 
+## Testing Pyramid
+When designing tests, it is useful to keep the "Testing Pyramid" in mind. This "Test Pyramid" is a visual representation of the abundance of tests based on certain "levels" of testing. More tests exist at the lower level of the pyramid than at the top because they exist at a lower level of abstraction (unit tests), whereas fewer exist at the top and focus on a higher layer of abstraction (system tests, UI tests, UAT).
+
+- Unit Testing
+  - Most micro-level of testing
+  - Test each component without dependencies
+  - Usually requires data mocking
+  - Unit testing tools include Junit and TestNg
+- Integration Testing
+  - Test components with dependencies
+  - Check that components work with one another correctly
+  - Logically related modules are tested as a group
+  - Integration testing tools include those used for Unit testing, along with third party tools like Postman or Thunderclient
+- System Testing
+  - Test the entire application as a whole
+  - Ensure the entire application works without errors
+  - System Testing tools include those used for Integration and Unit testing, alongside others like Selenium and Cucumber
+- Acceptance Testing 
+  - Test individual or whole aspects of an application to determine whether they are "acceptable" or not
+  - Often involves making subjective measurements and assessments, such as determining how intuitive the application is to use
+  - Can include tests used to validate user, stakeholder, or regulatory requirements are being met by the application
+  - Often requires manual testing, particularly for any subjective tests, but automation tools can be used for some forms of Acceptance testing
+
+![Testing Pyramid](testing-pyramid.png)
+
 ## Terminology
 
 ### Test Case
