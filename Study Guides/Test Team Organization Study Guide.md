@@ -94,6 +94,7 @@ graph TD
 ```
 
 ## Testing Lifecycles
+**NOTE**: keep in mind this STLC is a generalization: there is no "official" STLC. What is provided here is a general order of operations that companies will make uniquely their own
 
 ### Standard Testing Life Cycle
 
