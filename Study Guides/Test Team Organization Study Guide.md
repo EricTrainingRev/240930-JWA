@@ -72,6 +72,27 @@ After verification, the defect is marked as closed. The entry criteria for this 
 #### 8. Defect Reporting and Metrics
 The final phase involves reporting on the defect and gathering metrics to improve the development process. The entry criteria is a closed defect. Actions include generating reports on defect trends, root causes, and resolution times. These metrics help in identifying areas for process improvement and preventing future defects. The exit criteria are the availability of comprehensive defect reports and actionable insights for process enhancement
 
+#### Defect State Transition
+The state transition diagram below provides a basic flow chart of a defect life cycle. Note that once a defect is assigned and can be reassigned to someone new: typically this would happen if the assignee can't fix the defect or if someone with better expertise becomes available. In a similar vein, defects can be rejected for various reasons:
+- defect can't be reproduced
+- defect has been reclassified as a feature
+- defect is a duplicate of another defect
+- the next round of development is expected to fix the defect
+
+Finally, note that if fixes for the defect do not solve the defect then it needs to move back to the fix state in order to continue work solving the defect
+```mermaid
+graph TD 
+    identification --> triage
+    triage --> assign
+    assign --> fix
+    fix --> verification
+    fix --> rejection
+    fix --> assign
+    verification --> close
+    verification --> fix
+    rejection --> close
+```
+
 ## Testing Lifecycles
 
 ### Standard Testing Life Cycle
