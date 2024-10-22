@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS notes</title>
+    <style>
+        /* 
+            You can use a style tag to create internal CSS: the styling you define here is applied
+            to all elements that match your css "selector" defined in this element, and then your
+            style decisions are wrapped between curly brackets with the key value pairs separated
+            via comma. It looks very similar to a JSON 
+        */
+
+        /* 
+            the CSS styling below tells the browser that all divs should have ANY text content
+            stored within center aligned
+        */
+        div{
+            text-align: center;
+        }
+
+    </style>
+    <!-- you link external css using a link element -->
+    <link rel="stylesheet" href="external-css.css">
+</head>
+<body>
+    <!-- 
+        Most people like looking at nicely styled web pages: you can achieve this through the 
+        use of Cascading Style Sheets (CSS). There are three kinds of CSS:
+        - External CSS: this is styling that exists in a file separate from your HTML
+            - applied first, can be overridden by internal and in-line css
+        - Internal CSS: this is styling that exists in a style element in your HTML
+            - applied second, can be overridden by in-line css
+        - In-Line CSS: this is styling applied directly to the element that needs to be styled
+    -->
+
+    <!-- 
+        div elements are simply containers that can be used to group similar elements 
+        and apply attributes to all contained elements
+
+        Because we set some CSS information in our style element all divs in this file will have
+        the same styling applied to them. In this case, all divs will have their text content
+        center aligned. The styling "cascaded" down to any "child" elements.
+    -->
+    <div>
+        <!-- styles follow a key:value format and are separated via ; in line -->
+        <!-- 
+            The in-line styling below adjusts the box model of the element: 
+            - we adjusted the margin so the element has a little spacing between itself and
+              the viewport around it
+            - we added a border with some coloring around the element
+            - we adding some padding between the content of the element and the border
+            - and finally, we made the text red
+        -->
+        <!-- an element can have multiple classes assigned, they are separated by a space character -->
+         <!-- 
+            note: firstDiv class has styling associated with it: the styling is overridden by any
+            similar in-line css styling. Because the class styling and in-line styling apply to
+            the same style atrributes, the in-line styling overrules the class styling that is applied
+            via external styling
+          -->
+        <p class="firstDiv" style="color: red; border: 10px solid green; padding: 3px; margin: 16px;">This text is red</p>
+        <!-- these two p elements are "sibling" elements, and both are "child" elements of their container div -->
+        <p class="firstDiv">this text has no in-line styling</p>
+    </div>
+    <!-- these two div elements are "sibling" elements, and both are "child" elements of the body element -->
+    <div>
+        <!-- this p element is a child of its specific container div -->
+        <p class="secondDiv" id="idExample">this text is in a new div container</p>
+    </div>
+</body>
+</html>

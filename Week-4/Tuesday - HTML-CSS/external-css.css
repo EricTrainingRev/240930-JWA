@@ -1,0 +1,20 @@
+/* 
+    Two useful selectors are class and id selectors 
+    - class selectors put a period before the class name
+    - id selectors put a # before the id name
+*/
+.firstDiv{
+    color: rgb(99, 218, 208);
+    border: 5px dotted yellow;
+    padding: 5px; 
+    margin: 10px
+}
+
+.secondDiv{
+    text-align: right;
+    text-transform: uppercase;
+}
+
+#idExample{
+    color: purple;
+}
