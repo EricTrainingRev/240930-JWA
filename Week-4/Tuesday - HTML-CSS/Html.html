@@ -1,0 +1,167 @@
+<!-- the DOCTYPE can be used to indicate a different version of HTML -->
+<!DOCTYPE html>
+<!-- All HTML web pages need to be wrapped in an HTML element -->
+<html lang="en">
+<!-- the head element is used to store meta data about your web page -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example HTML File</title>
+</head>
+<!-- the body element is where the content we want rendered on the web page is typically located -->
+<body>
+    <!-- 
+        Hyper Text Markup Language (HTML) is the backbone of the web: if you have visited a web
+        page you have made use of HTML.
+
+        The basic building blocks of an HTML file are the "tags" used to create the "elements"
+        of the web page. Elements are read/rendered from the top of the page down, each line of
+        HTML being read from left to right
+    -->
+    
+    <!-- 
+        A common way text is presented on a web page is through the use of a paragraph element.
+        These elements are used to easily provide styling and structure to the text of your
+        web page. This element is a "block" element, so the browser will render it on its own
+        row of the web page 
+    -->
+    this text exists directly in the body
+    <p>This is a common way of presenting text on a web page</p>
+    <p>Since paragraphs are block elements, they will render on different rows</p>
+
+    <!-- 
+        Another style of element is "inline" elements: this content is rendered on the same 
+        row as other inline elements. One type of inline element is the "input" element: this
+        is used to take in user data of various kinds
+
+        Note how the tag (singular) for these inputs also include a type="something" section:
+        the word "type" is an attribute of the element, and the text in quotes is the value of 
+        that attribute. Through the use of attributes you can further customize how your elements
+        behave on the web page
+    -->
+    <input type="text"> <!-- this tells the browser the input is for generic text -->
+    <input type="password"> <!-- this tells the browser the input is for passwords, so the characters should be obfuscated -->
+
+    <!-- 
+        Typically an input element would have some associated label element. When you have this
+        setup you will typically see the label and input wrapped inside of a "form" element. Forms
+        used to be the primary way of making http requests, but with the advent of JavaScript they
+        are now used more for their ability to control user input than their ability to make HTTP
+        requests
+    -->
+
+    <form action="http://localhost:8080/something" method="get">
+        <label for="inputThree">inputThree label</label>
+        <input type="password" name="exampleInput" id="inputThree">
+        <button>my button</button>
+    </form>
+
+    <!--  
+        A common web element for organizing data on a page is the "table" element. These elements
+        contain two sub sections: a "header" section and a "body" section. All together, these
+        elements let you create table like structures in your web pages
+    -->
+
+    <!-- The table element is used to organize all the contents of your table -->
+    <table>
+        <!-- 
+            The two elements below, thead and tbody, are examples of "semantic" elements: they
+            differ in their intended use cases, but those intended uses are "semantic": we could
+            switch them and our table would still be able to render, but it would potentially
+            cause problems for tools such as screen readers, and it would be an unusual usage
+            of the elements if the thead contained the body of the table and the tbody contained the
+            headers of the table. 
+
+            Keep this in mind anytime you have an element that is acting as a container for other 
+            elements on the page: your "semantic" elements are providing context for the intended
+            use case of the elements stored within
+        -->
+
+        <!-- thead is where the header elements of your table should go -->
+        <thead>
+            <!-- 
+                "tr" is used to create a row in a table: you would have a unique row element
+                to represent each unique record you want stored in your table element 
+            -->
+            <tr>
+                <!-- "th" is used to create a header cell in a table -->
+                <th>This is my first header</th>
+                <th>This is my second header</th>
+            </tr>
+        </thead>
+        <!-- tbody is where the table content should go -->
+        <tbody>
+            <tr>
+                <!-- "td" is used to create a table data cell -->
+                <td>this is my first piece of data</td>
+                <td>this is my second piece of data</td>
+            </tr>
+            <tr>
+                <!-- you can put your elements on the same line of HTML text: it does not change the rendering -->
+                <td>this is data</td><td>for a second record</td><td>We can add an extra cell if we want</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 
+        HTML has two primary ways of listing data on your page, similar to making a bullet point
+        list or numbered list: the "ordered list" and the "unordered list". Both those elements
+        use the "list item" element to organize the data of the list
+    -->
+
+    <!-- an unordered list creates a bullet point list of the stored elements -->
+    <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Strawberry</li>
+    </ul>
+
+    <!-- an ordered list will provide a numeric value for each element -->
+    <ol>
+        <li>open login page</li>
+        <li>enter username and password</li>
+        <li>log in to the service</li>
+    </ol>
+
+    <!-- 
+        The "button" element is typically used when a user wants to perform some action on
+        the webpage. This can trigger an http request, a transformation on the page, etc.
+
+        Buttons will typically have an id attribute so they can be assigned some action via
+        JavaScript, but the action can also be defined directly in the button tag via the 
+        "onclick" attribute
+    -->
+
+    <button onclick="alert('this is your alert!')">click me to create an alert!</button>
+
+    <!-- 
+        If you want to embed an image in your web page you use the "img" element. This can be
+        a local image or one found on the web
+    -->
+
+    <!-- if the src attribute is set correctly, your image will be rendered in the browser -->
+    <img src="../../Week-3/Tuesday - Test Case Design/testing-pyramid.png" alt="testing pyramid">
+    <!-- if not, then the alt text is provided instead -->
+    <img src="../../Week-3/Tuesday - Test Case Design/testing-pyramid.pngg" alt="testing pyramid">
+
+    <!-- 
+        Select elements are used when you want to provide a curated list of options to your
+        users. Often this element can be used to allow a user to select from a pre-defined list
+        of available options: think things like choosing a drink size, saved payment options,
+        shirt size, quantity of objects to purchase, etc.
+    -->
+
+    <!-- anytime you want arbitrary line breaks in your page you can use a break element -->
+     <br>
+     <br>
+
+    <label for="selector">Select Example</label>
+    <select name="mySelectElement" id="selector">
+        <option value="actualValue">visual value</option>
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+    </select>
+    <button onclick="alert(`${selector.value}`)">alert the chosen value</button>
+
+</body>
+</html>
