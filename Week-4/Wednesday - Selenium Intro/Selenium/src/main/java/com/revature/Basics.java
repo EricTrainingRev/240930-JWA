@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class App {
+public class Basics {
 
     public static void main(String[] args) {
 
@@ -52,15 +52,15 @@ public class App {
             // all WebElements have the "click" method, which simulates a user clicking on the element
             englishLink.click();
 
+            // a simple way of validating you have changed to a new page correctly is to check the title
             String expectedTitle = "Wikipedia, the free encyclopedia";
 
+            // "getTitle" will return the title of the current page
             System.out.println(driver.getTitle().equals(expectedTitle));
-
-
-
 
         } finally {
             if(driver != null){
+                // make sure you use the "quit" method when you are done with the app, or the driver will remain active
                 driver.quit();
             }
         }
