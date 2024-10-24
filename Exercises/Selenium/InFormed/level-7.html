@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window resize</title>
+</head>
+<body>
+
+    <p>You must resize the browser to make the buttons work. Once you click the two buttons the submit will become available</p>
+
+    <button disabled onclick="approveCheck1()">smaller than 600px by 600px</button>
+    <br>
+
+    <button disabled onclick="approveCheck2()">larger than 600px by 600px</button>
+
+    <button disabled onclick="submit()">Submit</button>
+    
+</body>
+<script>
+    const start = Date.now();
+    const [btn1,btn2, btn3] = document.getElementsByTagName("button");
+    let [check1,check2] = [false,false];
+
+        if(innerHeight <600 && innerWidth <600){
+            btn1.disabled = false;
+        }else{
+            btn1.disabled = true;
+        }
+
+        if(innerHeight >600 && innerWidth >600){
+            btn2.disabled = false;
+        }else{
+            btn2.disabled = true;
+        }
+
+
+
+    function approveCheck1(){
+        check1 = true;
+        if(check1 && check2){
+            btn3.disabled = false;
+        }
+    }
+
+    function approveCheck2(){
+        check2 = true;
+        if(check1 && check2){
+            btn3.disabled = false;
+        }
+    }
+
+    function submit(){
+        const time = Date.now() - start;
+        alert(`SUCCESS!!! Time: ${time} milleseconds from page load`)    
+    }
+
+
+    window.addEventListener("resize", event =>{
+
+        if(innerHeight <600 && innerWidth <600){
+            btn1.disabled = false;
+        }else{
+            btn1.disabled = true;
+        }
+
+        if(innerHeight >600 && innerWidth >600){
+            btn2.disabled = false;
+        }else{
+            btn2.disabled = true;
+        }
+
+
+
+    });
+
+    
+</script>
+</html>

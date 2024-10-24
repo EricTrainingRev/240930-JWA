@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form >
+        
+        <input type="text" placeholder="must be at least 100 characters long mwah haha" minlength="100" >
+
+        <button type="button" data-reveal="showModal">Show Modal</button>
+        <dialog>
+            <h1>Hello</h1>
+            <button type="button" data-close="close">Close</button>
+        </dialog>
+        <button>Submit</button>
+    </form>
+    </body>
+    <script>
+        const start = Date.now();
+        const inputs = document.getElementsByTagName("input");
+        const showBtn = document.querySelector("button");
+        const dialog = document.querySelector("dialog");
+
+
+        document.addEventListener("input", function(event){
+            alert("Laughs in evil")
+        })
+
+        document.addEventListener("click", function(event){
+            if(event.target.dataset.reveal){
+                dialog.showModal()
+            }
+            if(event.target.dataset.close){
+                dialog.close()
+            }
+            
+        });
+
+
+        document.addEventListener("submit", function (event){
+            event.preventDefault();
+            const time = Date.now() - start;
+            alert(`SUCCESS!!! Time: ${time} milleseconds from page load`)
+        })
+    </script>
+</html>

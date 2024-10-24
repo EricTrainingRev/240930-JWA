@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h3>Input Values</h3>
+        <dl>
+            <dt>Dropdown</dt>
+            <dd>3</dd>
+
+            <dt>Checkbox</dt>
+            <dd>All of them</dd>
+
+            <dt>Radio</dt>
+            <dd>2</dd>
+
+            <dt>Date</dt>
+            <dd>9/20</dd>
+
+            <dt>Button to submit</dt>
+            <dd>3</dd>
+
+        </dl>
+        <form>
+
+            <label for="input1">Dropdown</label>
+            <select name="input1"> 
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <fieldset>
+                <legend>Check Box</legend>
+
+                <label for="checkbox1">check1</label>
+                <input type="checkbox" name="checkbox1">
+    
+                <label for="checkbox2">check2</label>
+                <input type="checkbox" name="checkbox2">
+                
+                <label for="checkbox3">check3</label>
+                <input type="checkbox" name="checkbox3">
+            </fieldset>
+
+
+
+
+            <fieldset>
+                <legend>Radio Buttons</legend>
+
+                
+                <input type="radio" name="radio" value="1">
+                <label>1</label>
+                <br/>
+                
+                
+                <input type="radio" name="radio" value="2">
+                <label>2</label>
+                <br/>
+
+                <input type="radio" name="radio" value="3">
+                <label>3</label>
+                <br/>
+            </fieldset>
+
+
+
+            <input type="date" name="dateInput">
+
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+
+        </form>
+    </body>
+    <script>
+        const start = Date.now();
+        let dropValue;
+        let dateValue;
+        let radioValue;
+
+        (()=>{
+            const buttons = document.getElementsByTagName("button");
+            const dds = document.getElementsByTagName("dd");
+            const dateInput = document.getElementsByTagName("input")[6];
+            const rand = Math.random();
+
+
+            if(rand >0.67){
+                buttons[2].type ="submit"
+                dds[0].innerText = 3;
+                dropValue = 3
+                dds[3].innerText = "2019-09-22";  
+                dateValue = "2019-09-22";
+                dds[4].innerText = 3;      
+                radioValue = 3;     
+                return;
+            }
+
+            if(rand > 0.33){
+                buttons[1].type ="submit"
+                dds[0].innerText = 2;
+                dropValue = 2;
+                dds[3].innerText = "2018-07-17"; 
+                dateValue = "2018-07-17"; 
+                dds[4].innerText = 2; 
+                radioValue = 2;           
+                return;
+            }
+
+            buttons[0].type ="submit"
+            dds[0].innerText = 1;
+            dropValue = 1;
+            dds[3].innerText = "2023-11-11";  
+            dateValue = "2023-11-11";  
+            dds[4].innerText = 1;
+            radioValue = 2;  
+            
+                
+        })()
+
+
+        document.addEventListener("submit", function(event){
+            event.preventDefault()
+
+            const data = new FormData(event.target)
+
+            const input1 = data.get("input1")
+            const checkbox1 = data.get("checkbox1")
+            const checkbox2 = data.get("checkbox2")
+            const checkbox3 = data.get("checkbox3")
+            const radio = data.get("radio")
+            const date = data.get("dateInput")
+            const info = {input1,checkbox1,checkbox2,checkbox3,radio,date};
+
+            if(input1 == dropValue && checkbox1 && checkbox2 && checkbox3 && radio == radioValue && date == dateValue){
+                const time = Date.now() - start;
+                alert(`SUCCESS!!! Time: ${time} milleseconds from page load`)
+                
+            }else{
+                alert("FAILURE!!! Input value does not equal Name to input")
+            }
+
+        });
+
+
+    </script>
+</html>

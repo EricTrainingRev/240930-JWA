@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>You must use the links to enable each approval gate. on their respective page. Only then will the submit button work</p>
+
+
+    <form action="">
+
+        <h5>Approval gate 1 <a href="level-6b.html">link</a></h5>
+        <input type="checkbox" disabled required>
+
+        <h5>Approval gate 2 <a href="level-6c.html">link</a></h5>
+        <input type="checkbox" disabled required>
+        <br>
+
+        <button  disabled>Submit</button>
+    </form>
+
+    
+
+    
+</body>
+<script>
+    const start = Date.now();
+    const bc = new BroadcastChannel('comm-channel');
+
+    bc.onmessage = function(event){
+        if(event.data === "GATE 1"){
+            document.getElementsByTagName("input")[0].checked = true;
+        }
+
+        if(event.data === "GATE 2"){
+            document.getElementsByTagName("input")[1].checked = true;
+        }
+
+        if(document.getElementsByTagName("input")[0].checked && document.getElementsByTagName("input")[1].checked){
+            document.getElementsByTagName("button")[0].disabled = false;
+        }
+       
+    };
+
+    document.addEventListener("submit", function(event){
+            event.preventDefault();
+            const time = Date.now() - start;
+            alert(`SUCCESS!!! Time: ${time} milleseconds from page load`)
+        });
+   
+
+</script>
+</html>

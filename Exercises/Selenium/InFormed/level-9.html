@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <form>
+            <input type="text"  id="nameInput"/>
+            <button id="submitBtn">Submit</button>
+        </form>
+
+        
+    </body>
+    <script>
+        const submitBtn = document.getElementById("submitBtn");
+        const nameInput = document.getElementById("nameInput");
+        setInterval(()=>{
+            nameInput.hidden = !nameInput.hidden
+        },500)
+
+        document.addEventListener("submit", function(event){
+            event.preventDefault();
+
+        })
+
+    </script>
+</html>

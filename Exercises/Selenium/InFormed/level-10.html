@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Take a screenshot of the page using selenium. Upload the image and then press review. It will check to see if the image contains
+        the randomly created number. <b>It might take over a minute for the image to process</b>
+    </p>
+
+    <input type="file">
+    <button onclick="analyzeFile()">Review</button>
+    <progress max="1" value="0"></progress>
+
+    <p></p>
+
+    
+    
+</body>
+<script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+
+<script>
+    const start = Date.now();
+    const rando =  ["APPLE","BANANA","CHERRY","DURIAN","GRAPE"].map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => value)[0]
+
+    const input = document.getElementsByTagName("input")[0];
+    const heading = document.getElementsByTagName("p")[1];
+    const progrssBar = document.getElementsByTagName("progress")[0];
+    heading.innerText = rando;
+
+    async function analyzeFile(){
+        const results = await Tesseract.recognize(input.files[0], 'eng', { logger: m => {
+            console.log(m);
+            if(m.status === "recognizing text"){
+                progrssBar.value = m.progress;
+            }
+            
+        }});
+        const text = results.data.text;
+
+        if(text.includes(String(rando))){
+            const time = Date.now() - start;
+            alert(`SUCCESS!!! Time: ${time} milleseconds from page load`)
+        }else{
+            alert(`Could not verify that it contained the random number. Parsed text was ${text}`)
+        }
+
+    
+    }
+
+
+    
+</script>
+</html>

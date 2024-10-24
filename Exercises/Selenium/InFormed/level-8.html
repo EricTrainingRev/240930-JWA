@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>File Upload</title>
+</head>
+<body>
+
+    <p>upload a text file. The content should be Let's Go Gators</p>
+
+    <input type="file" />
+    <button>Submit</button>
+
+    
+</body>
+<script>
+    const input = document.getElementsByTagName("input")[0];
+    const btn = document.getElementsByTagName("button")[0];
+    const start = Date.now();
+
+    btn.addEventListener("click", function(event){
+        const file = input.files[0];
+        const reader = new FileReader();
+
+        reader.onload = event =>{
+            const text = event.target.result;
+
+            if(text === "Let's Go Gators"){
+                const time = Date.now() - start;
+                alert(`SUCCESS!!! Time: ${time} milleseconds from page load`)
+            }else{
+                alert("The text file content is wrong")
+            }
+        }
+
+        reader.readAsText(file);
+
+    })
+
+    
+    
+
+</script>
+</html>
