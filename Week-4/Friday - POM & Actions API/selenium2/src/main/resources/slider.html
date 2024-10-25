@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body>
+    <h1></h1>
+    <input type="range" min="0" max="10" step="1" value="0">
+</body>
+<script>
+    const slider = document.querySelector('input');
+    const h1 = document.querySelector('h1');
+
+    h1.textContent = slider.value;
+
+    slider.addEventListener('input', function() {
+        h1.textContent = slider.value;
+    });
+</script>
+</html>
