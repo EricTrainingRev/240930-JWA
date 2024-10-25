@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frogger</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    #header {
+        color: white;
+        text-shadow: 2px 2px black;
+
+    }
+    #finish, #start {
+        height: 10vh;
+        display: flex;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #course{
+        height: 60vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .hop{
+        flex-grow: 1;
+
+    }
+    .brownSection{
+        background-color: brown;
+    }
+    .section{
+        width: 100%;
+        height: 25%;
+        background-color: rgb(37, 164, 214);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #frog{
+        height: 75px;
+        width: 75px;
+        position: absolute;
+    }
+
+</style>
+<body>
+    <div id="header" class="brownSection">
+        <h1>Medium Maze</h1>
+        <p>
+            Complete the maze by navigating from the bottom of the page to the top of the page.<br>
+            use the "w", "a", "s", and "d" keys to move the frog on to the green "lilypads" while<br>
+            avoiding the blue "water".
+        </p>
+        <br>
+    </div>
+    <div id="finish"  class="brownSection"></div>
+    <div id="course">
+        <span class="hop">
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+        </span>
+        <span class="hop">
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+        </span>
+        <span class="hop">
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+        </span>
+        <span class="hop">
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+        </span>
+    </div>
+    <div id="start" class="brownSection"></div>
+</body>
+<script>
+    const startingColumn = Math.floor(Math.random() * 4);
+    const course = document.getElementById("course");
+    let currentCell;
+    let frogElement;
+    let frogCell;
+
+    placeFrog(startingColumn);
+    generateLilypads();
+
+    document.addEventListener('keydown', (event) => {
+        const keyPressed = event.key;
+        moveFrog(keyPressed);
+    });
+
+    function placeFrog(newCell){
+        let startingSpan = course.children[newCell];
+        let startingDiv = startingSpan.children[3];
+        startingDiv.style.backgroundColor = "green";
+        let frog = document.createElement("img");
+        frog.id = "frog";
+        frog.src = "frog.png";
+        frogElement = frog;
+        startingDiv.appendChild(frog);
+        currentCell = [newCell, 3];
+        frogCell = [newCell, 3];
+    }
+
+    function generateLilypads(){
+        let movedUp = false;
+        let movedHorizontally = false;
+        let finishReached = false;
+        while(!finishReached){
+            const moveOptions = [];
+            if(!movedUp){
+                moveOptions.push("up");
+            }
+            if(!movedHorizontally){
+                moveOptions.push("horizontally");
+            }    
+            const move = moveOptions[Math.floor(Math.random() * moveOptions.length)];
+            switch(move){
+                case "up":
+                    movedUp = true;
+                    movedHorizontally = false;
+                    addLilyPadUp();
+                    break;
+                case "horizontally":
+                    movedHorizontally = true;
+                    movedUp = false;
+                    addLilyPadHorizontally();
+                    break;
+            }
+            if (currentCell[1] === 0){
+                finishReached = true;
+            }       
+        }
+    }
+
+    function addLilyPadUp(){
+        const column = course.children[currentCell[0]];
+        const row = column.children[currentCell[1]-1];
+        currentCell[1]--;
+        row.style.backgroundColor = "green";
+    }
+
+    function addLilyPadHorizontally(){
+        const moveLeft = Math.random() < 0.5;
+        if(moveLeft){
+            if(currentCell[0] !== 0){
+                currentCell[0]--;
+            } else {
+                currentCell[0]++;
+            }
+            
+        }else{
+            if(currentCell[0] !== 3){
+                currentCell[0]++;
+            } else {
+                currentCell[0]--;
+            }
+        }
+        const column = course.children[currentCell[0]];
+        const row = column.children[currentCell[1]];
+        row.style.backgroundColor = "green"; 
+    }
+
+    function moveFrog(direction){
+        let frogParent = frog.parentNode;
+        frogParent.removeChild(frog);
+        switch (direction){
+            case "w":
+                frogCell[1]--;
+                break;
+            case "a":
+                frogCell[0]--;
+                break;
+            case "s":
+                frogCell[1]++;
+                break;
+            case "d":
+                frogCell[0]++;
+                break;
+        }
+        let newFrogCell
+        if(frogCell[1] === -1){
+            newFrogCell = finish;
+        } else {
+            newFrogCell = course.children[frogCell[0]].children[frogCell[1]];
+        }
+        newFrogCell.appendChild(frogElement);
+        if(newFrogCell === finish){
+            alert("You Win!");
+        } else if(newFrogCell.style.backgroundColor !== "green"){
+            alert("You Lose!");
+            document.body.style.backgroundColor = "blue";
+            document.body.innerHTML = "";
+        }
+    }
+</script>
+</html>

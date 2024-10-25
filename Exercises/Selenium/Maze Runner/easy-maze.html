@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellow Road Maze</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: red;
+            color: white;
+            text-shadow: 2px 2px black;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: calc(90vh / 3);
+        }
+        .section {
+            display: inline-block;
+            margin: 0;
+            height: 100%;
+            width: 25%;
+            background-color: yellow;
+        }
+        .section p {
+            margin: 0;
+        }
+        .red-section {
+            background-color: red;
+            color: white;
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Easy Maze</h1>
+        <p>Complete the maze by navigating to each yellow colored section of the web page.<br>
+            Click the start button to begin the maze, and the finish button once all yellow sections 
+            have been turned green to finish
+        </p>
+        <br>
+    </div>
+    <div class="row">
+        <div class="section">
+          <p>test</p>
+          <button onclick="startMaze()">Start</button>
+        </div>
+        <div class="section">
+          <p>test</p>
+        </div>
+        <div class="section">
+          <p>test</p>
+        </div>
+        <div class="section">
+          <p>test</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="section red-section">
+          <p>test</p>
+        </div>
+        <div class="section">
+          <p>test</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="section">
+          <p>test</p>
+          <button onclick="endMaze()">Finish</button>
+        </div>
+        <div class="section">
+          <p>test</p>
+        </div>
+        <div class="section">
+          <p>test</p>
+        </div>
+        <div class="section">
+          <p>test</p>
+        </div>
+      </div>
+</body>
+<script>
+
+  let nonRedSections;
+  let redSections;
+
+  let start;
+  let end;
+  function startMaze() {
+    nonRedSections = document.querySelectorAll('.section:not(.red-section)');
+    nonRedSections.forEach((section) => {
+      section.style.backgroundColor = 'yellow';
+    });
+    nonRedSections.forEach((section) => {
+      section.addEventListener('mouseover', () => {
+        if (section.style.backgroundColor !== 'green') {
+          section.style.backgroundColor = 'green';
+        }
+      });
+    });
+    redSections = document.querySelectorAll('#header, .red-section');
+    redSections.forEach(div => {
+      div.addEventListener('mouseover', () => {
+        document.body.innerHTML = '';
+        document.body.style.backgroundColor = 'red';
+      });
+    });
+    start = performance.now();
+  }
+
+  function endMaze(){
+    end = performance.now();
+    if (Array.from(nonRedSections).every(section => section.style.backgroundColor === 'green')) {
+      const timeTaken = end - start;
+      alert(`Maze complete! Time taken: ${timeTaken}ms`);
+      // TODO: remove event listeners from red sections
+    } else {
+      alert('Maze incomplete: one or more sections are not green');
+    }
+  }
+</script>
+</html>
