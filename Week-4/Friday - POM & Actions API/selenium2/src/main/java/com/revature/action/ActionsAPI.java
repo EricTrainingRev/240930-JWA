@@ -36,7 +36,7 @@ public class ActionsAPI {
             sliderPage.openSliderPage();
 
             // step 3: click and drag the slider to the 6 position
-            sliderPage.clickAndDragSlider();
+            sliderPage.clickAndDragSlider(6);
 
             // step 4: validate the header says 6
             System.out.println(sliderPage.getHeaderText());
