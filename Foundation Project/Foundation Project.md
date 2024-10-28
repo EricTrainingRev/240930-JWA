@@ -132,3 +132,34 @@ The Planetarium is a web application designed by Revature Space Initiative for a
     - SQLite3 is used by the application
 - a database needs to be created and set up for the planetarium to work properly. Use the ```setup-reset.sql``` file to create the database at the same location as your "PLANETARIUM" environment variable
 -  start the application with the command ```java -jar path/to/Planetarium-1.0-shaded.jar```
+
+
+## Presentation Requirements
+- shoot for a 5 minute presentation
+- have your test reports ready to go
+- share a github repo link with your trainer before you start your presentation
+- A couple recommendations
+    - write down what you want to say
+    - organize your desktop/browser so all the content you need is prepared when you start your presentation
+
+## Presentation Order of Operations
+1. Present Test Summary Report
+2. Showcase Acceptance Testing Summary Report
+3. Perform mini Sprint retrospective
+    - what went well in the Sprint?
+        - you had a good understanding of the work
+        - you were quick to implement your test strategy to streamline work
+        - you came up with a way to automate much of the setup/tear down for resetting your test environment between tests
+        - etc.
+    - what can be improved for next Sprint?
+        - did you underestimate how long a phase would take to complete?
+        - did you do a poor job of implementing your chosen testing techniques?
+        - did you fall behind your schedule and have to rush to finish your work?
+        - etc.
+    - what work needs to be done next Sprint?
+        - do you have more tests to execute?
+        - are there edge cases you discovered that you want to test?
+        - are there new testing strategies you can implement next sprint?
+        - do you need to update your Story Points / Velocity estimates?
+        - etc.
+4. Field questions
