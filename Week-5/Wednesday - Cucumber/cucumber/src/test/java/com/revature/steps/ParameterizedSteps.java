@@ -14,8 +14,4 @@ public class ParameterizedSteps {
         System.out.println("puppy method called");
     }
 
-    @When("{string} is provided")
-    public void is_provided(String data) {
-        System.out.println(data + " method called");
-    }
 }
