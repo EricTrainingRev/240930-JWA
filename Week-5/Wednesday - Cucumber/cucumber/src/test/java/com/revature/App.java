@@ -21,7 +21,7 @@ import io.cucumber.core.cli.Main;
 public class App {
     public static void main(String[] args) {
         Main.main(
-                new String[]{"-g","com.revature.steps.BasicsSteps"}
+                new String[]{"-g","com.revature.steps"}
         );
     }
 }
