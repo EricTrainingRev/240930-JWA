@@ -144,7 +144,17 @@ The Planetarium is a web application designed by Revature Space Initiative for a
 
 ## Presentation Order of Operations
 1. Present Test Summary Report
+    - give a brief overview of the scope of your testing
+    - describe 1-3 meaningful discoveries made by your testing
+        - high severity defects
+        - interesting edge cases
 2. Showcase Acceptance Testing Summary Report
+    - give a brief overview of your acceptance testing
+    - describe 1-3 meaningful discoveries made by your testing
+        - all use cases inspired confidence
+        - no use cases inspired confidence
+        - majority of use cases were pleasing to look at
+        - etc.
 3. Perform mini Sprint retrospective
     - what went well in the Sprint?
         - you had a good understanding of the work
@@ -163,3 +173,5 @@ The Planetarium is a web application designed by Revature Space Initiative for a
         - do you need to update your Story Points / Velocity estimates?
         - etc.
 4. Field questions
+
+**NOTE**: please save your talking points for your Sprint Retrospective and save them along with your other test documentation in your project github repo
