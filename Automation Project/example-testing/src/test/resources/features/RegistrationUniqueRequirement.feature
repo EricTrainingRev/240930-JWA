@@ -10,6 +10,9 @@ Feature: RegistrationUniqueRequirement
 		And The user enters the password "<Password>"
 		And The user clicks the register button
 		Then Then an alert should appear saying "<User Created>"
+		"""
+		<Username>
+		"""
 		And The "<User redirected to login page result>"
 
 	Examples: 

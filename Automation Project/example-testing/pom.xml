@@ -35,6 +35,12 @@
             <version>6.1.1</version>
             <scope>test</scope>
         </dependency>
+        <!--   with this dependency we can reset our test database without using an external app    -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.45.2.0</version>
+        </dependency>
     </dependencies>
 
 </project>

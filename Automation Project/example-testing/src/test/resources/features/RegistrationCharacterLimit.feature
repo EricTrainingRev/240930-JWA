@@ -10,6 +10,9 @@ Feature: RegistrationCharacterLimit
 		And The user enters the password "<Password>"
 		And The user clicks the register button
 		Then Then an alert should appear saying "<Account Creation Result>"
+		"""
+		<Username>
+		"""
 		And The "<User redirected to login page result>"
 
 	Examples: 
