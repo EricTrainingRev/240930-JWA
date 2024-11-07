@@ -1,4 +1,3 @@
-
 Feature: RegistrationCharacterLimit
 
 	Scenario Outline: User Registration Username/Password 30 character Limit Requirement Test Case
@@ -8,7 +7,10 @@ Feature: RegistrationCharacterLimit
 		When The user enters the username "<Username>"
 		And The user enters the password "<Password>"
 		And The user clicks the register button
-		Then Then an alert should appear saying "<Account Creation Result>" for "<Username>"
+		Then Then an alert should appear saying "<Account Creation Result>"
+			"""
+			<Username>
+			"""
 		And The "<User redirected to login page result>"
 
 	Examples: 

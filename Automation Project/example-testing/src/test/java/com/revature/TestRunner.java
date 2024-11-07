@@ -18,7 +18,7 @@ import java.time.Duration;
 @CucumberOptions(
         glue = "com.revature.steps",
         features = "classpath:features",
-        plugin = "pretty"
+        plugin = {"pretty","json:src/test/resources/json-report.json", "html:/src/test/resources/html-report.html"}
 )
 public class TestRunner {
 

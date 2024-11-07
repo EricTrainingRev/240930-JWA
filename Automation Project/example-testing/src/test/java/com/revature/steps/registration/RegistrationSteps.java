@@ -24,8 +24,8 @@ public class RegistrationSteps {
         TestRunner.registrationPage.clickRegisterButton();
     }
 
-    @Then("Then an alert should appear saying {string}")
-    public void then(String message, String docString) {
+    @Then("Then an alert should appear saying {string} for {string}")
+    public void then(String message, String username) {
         // here we tell the driver to wait up to 2 seconds for the alert before continuing
         TestRunner.alertWait.until(ExpectedConditions.alertIsPresent());
         Alert alert = TestRunner.driver.switchTo().alert();
@@ -33,9 +33,9 @@ public class RegistrationSteps {
         // if one of these assert statements fails then the methods execution stops, so we need to make sure the alert is closed
         try{
             if(message.equals("User created")){
-                Assert.assertEquals("Account created successfully with username \"" + docString + "\"", alertMessage);
+                Assert.assertEquals("Account created successfully with username \"" + username + "\"", alertMessage);
             } else if (message.equals("User not created")) {
-                Assert.assertEquals("Account creation failed with username \"" + docString + "\"", alertMessage);
+                Assert.assertEquals("Account creation failed with username \"" + username + "\"", alertMessage);
             } else{
                 Assert.fail("Incorrect alert message produced: actual message: " + alertMessage );
             }

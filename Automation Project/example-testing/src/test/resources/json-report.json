@@ -1,0 +1,1445 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-11-06T19:39:17.971Z",
+        "line": 16,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 431578400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 509051000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 206524100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the username \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 134523400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user enters the password \"(no value)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no value)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88004300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...ername \"(no values)\"[]\u003e but was:\u003c...ername \"(no values)\"[ and password \"(no value)\"]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:36)\r\n\tat ✽.Then an alert should appear saying \"User created\" for \"(no values)\"(classpath:features/RegistrationCharacterLimit.feature:11)\r\n",
+              "duration": 1085087100,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User created\" for \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-06T19:39:20.621Z",
+        "line": 17,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 77980100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 150995100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 131000500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the username \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 195002600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user enters the password \"GordonIsMyHeroForeverGoodMan11\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GordonIsMyHeroForeverGoodMan11\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 101997400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cAccount creat[ed successfully with username \"(no values)]\"\u003e but was:\u003cAccount creat[ion failed with username \"(no values)\" and password \"GordonIsMyHeroForeverGoodMan11]\"\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:36)\r\n\tat ✽.Then an alert should appear saying \"User created\" for \"(no values)\"(classpath:features/RegistrationCharacterLimit.feature:11)\r\n",
+              "duration": 541932700,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User created\" for \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-06T19:39:21.831Z",
+        "line": 18,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 55002700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 139002600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 184998300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the username \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 205997100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user enters the password \"LexLuthorIsSchemingAgainOhNo!!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LexLuthorIsSchemingAgainOhNo!!!\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 110002400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...ername \"(no values)\"[]\u003e but was:\u003c...ername \"(no values)\"[ and password \"LexLuthorIsSchemingAgainOhNo!!!\"]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:38)\r\n\tat ✽.Then an alert should appear saying \"User not created\" for \"(no values)\"(classpath:features/RegistrationCharacterLimit.feature:11)\r\n",
+              "duration": 38004000,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-06T19:39:22.577Z",
+        "line": 19,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 97994100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 250533500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 294049300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the username \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 152002900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user enters the password \"(no value)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no value)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 85004100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...binToTheRescue20202\"[]\u003e but was:\u003c...binToTheRescue20202\"[ and password \"(no value)\"]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:36)\r\n\tat ✽.Then an alert should appear saying \"User created\" for \"BatmanAndRobinToTheRescue20202\"(classpath:features/RegistrationCharacterLimit.feature:11)\r\n",
+              "duration": 533782800,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User created\" for \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-06T19:39:23.998Z",
+        "line": 20,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 76385900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 182052100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 230001000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the username \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 190000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user enters the password \"GordonIsMyHeroForeverGoodMan11\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GordonIsMyHeroForeverGoodMan11\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 80000600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cAccount creat[ed successfully with username \"BatmanAndRobinToTheRescue20202]\"\u003e but was:\u003cAccount creat[ion failed with username \"BatmanAndRobinToTheRescue20202\" and password \"GordonIsMyHeroForeverGoodMan11]\"\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:36)\r\n\tat ✽.Then an alert should appear saying \"User created\" for \"BatmanAndRobinToTheRescue20202\"(classpath:features/RegistrationCharacterLimit.feature:11)\r\n",
+              "duration": 72000100,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User created\" for \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 159600,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-06T19:39:24.846Z",
+        "line": 21,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 80991600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 154006600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 217049200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the username \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 168559700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user enters the password \"LexLuthorIsSchemingAgainOhNo!!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LexLuthorIsSchemingAgainOhNo!!!\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 80001100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...binToTheRescue20202\"[]\u003e but was:\u003c...binToTheRescue20202\"[ and password \"LexLuthorIsSchemingAgainOhNo!!!\"]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:38)\r\n\tat ✽.Then an alert should appear saying \"User not created\" for \"BatmanAndRobinToTheRescue20202\"(classpath:features/RegistrationCharacterLimit.feature:11)\r\n",
+              "duration": 27530300,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-06T19:39:25.587Z",
+        "line": 22,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 73051900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 130003100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 193994100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the username \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 114016000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user enters the password \"(no value)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no value)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72990600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...lerAreAtItAgain1010\"[]\u003e but was:\u003c...lerAreAtItAgain1010\"[ and password \"(no value)\"]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:38)\r\n\tat ✽.Then an alert should appear saying \"User not created\" for \"JokerAndRiddlerAreAtItAgain1010\"(classpath:features/RegistrationCharacterLimit.feature:11)\r\n",
+              "duration": 36002800,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-06T19:39:26.223Z",
+        "line": 23,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 69998600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 136001400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 189000800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the username \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 201996400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user enters the password \"GordonIsMyHeroForeverGoodMan11\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GordonIsMyHeroForeverGoodMan11\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 70003000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...lerAreAtItAgain1010\"[]\u003e but was:\u003c...lerAreAtItAgain1010\"[ and password \"GordonIsMyHeroForeverGoodMan11\"]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:38)\r\n\tat ✽.Then an alert should appear saying \"User not created\" for \"JokerAndRiddlerAreAtItAgain1010\"(classpath:features/RegistrationCharacterLimit.feature:11)\r\n",
+              "duration": 25994600,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-06T19:39:26.929Z",
+        "line": 24,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 91011300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 160515400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 244061800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the username \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 193000400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user enters the password \"LexLuthorIsSchemingAgainOhNo!!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LexLuthorIsSchemingAgainOhNo!!!\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 102999400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...lerAreAtItAgain1010\"[]\u003e but was:\u003c...lerAreAtItAgain1010\"[ and password \"LexLuthorIsSchemingAgainOhNo!!!\"]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:38)\r\n\tat ✽.Then an alert should appear saying \"User not created\" for \"JokerAndRiddlerAreAtItAgain1010\"(classpath:features/RegistrationCharacterLimit.feature:11)\r\n",
+              "duration": 529444100,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "RegistrationCharacterLimit",
+    "description": "",
+    "id": "registrationcharacterlimit",
+    "keyword": "Feature",
+    "uri": "classpath:features/RegistrationCharacterLimit.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-11-06T19:39:28.260Z",
+        "line": 15,
+        "name": "Automated User Registration Unique Username Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a valid password and a unique username, and if the username is not unique their account should not be created",
+        "id": "registrationuniqueusername;automated-user-registration-unique-username-requirement-test-case;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 71002400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 144994000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 100001300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user enters the username \"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robin\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 202002500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the password \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 68515000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...ith username \"Robin\"[]\u003e but was:\u003c...ith username \"Robin\"[ and password \"BatmanAndRobinToTheRescue20202\"]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:36)\r\n\tat ✽.Then an alert should appear saying \"User created\" for \"Robin\"(classpath:features/RegistrationUniqueUsername.feature:10)\r\n",
+              "duration": 531330600,
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "Then an alert should appear saying \"User created\" for \"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"Robin\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-06T19:39:29.391Z",
+        "line": 16,
+        "name": "Automated User Registration Unique Username Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a valid password and a unique username, and if the username is not unique their account should not be created",
+        "id": "registrationuniqueusername;automated-user-registration-unique-username-requirement-test-case;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 81999300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 178018600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 200983200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user enters the username \"Batman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 332636800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user enters the password \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 132529600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...th username \"Batman\"[]\u003e but was:\u003c...th username \"Batman\"[ and password \"BatmanAndRobinToTheRescue20202\"]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.revature.steps.registration.RegistrationSteps.then(RegistrationSteps.java:38)\r\n\tat ✽.Then an alert should appear saying \"User not created\" for \"Batman\"(classpath:features/RegistrationUniqueUsername.feature:10)\r\n",
+              "duration": 93000500,
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "Then an alert should appear saying \"User not created\" for \"Batman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"Batman\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1013100,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "RegistrationUniqueUsername",
+    "description": "",
+    "id": "registrationuniqueusername",
+    "keyword": "Feature",
+    "uri": "classpath:features/RegistrationUniqueUsername.feature",
+    "tags": []
+  }
+]
