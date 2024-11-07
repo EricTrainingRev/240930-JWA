@@ -32,6 +32,34 @@ Acceptance Testing is a process that allows for validating the application in qu
     - page loading takes a long time
 - Accessibility features don't work correctly
 
+## System Testing
+
+### Typical Objectives
+System Testing involves verifying that functional and non-functional requirements are met when all systems are working together in an application. This includes the database, back end, front end, and supporting cloud infrastructure. Good System Testing can reveal novel defects that are undetectable by lower level testing, and a robust System Testing suite helps create confidence in the system as a whole.
+
+### Common Types of System Testing
+- End to End testing
+    - verifying user actions can complete User Stories by fulfilling  Acceptance Criteria
+- Performance testing 
+    - verifying the application is responsive withing contractual obligations
+    - verifying the application has the scaling potential as planned
+- Load testing
+    - verifying the application can handle the expected number of users
+- Compatibility Testing
+    - verifying the application works in different environments
+        - different browsers
+        - different operating systems
+- Penetration Testing
+    - verifying the security of the application is robust enough to withstands well known attacks
+
+### Typical Defects
+- Incorrect or unexpected functional behavior
+- System does not conform to specifications
+- Inability to complete all parts of end-to-end tasks
+- Performance does not meet minimal requirements
+- Application does not meet security requirements
+- Cloud environment does not scale appropriately
+
 # Types of Tests Revisited & Updated
 - **Functional**
   - broad category of tests, relates to features that a user can use (i.e. WHAT the system does)
@@ -74,6 +102,25 @@ Acceptance Testing is a process that allows for validating the application in qu
         - regulatory body validates local ordinances are being followed
         - end user validates the application is intuitive and engaging
     - Top of pyramid, should have relatively fewer Acceptance Tests than others
+- **Performance Testing**
+    - testing how well an application works, not if it works or not
+    - typically part of System Testing, but it can be Integration or Unit testing
+    - types of Performance Testing:
+        - **Endurance**: testing how long an application can be sustained under normal load
+            - can reveal defects like memory leaks or poorly configured log management, or other defects that are only revealed over time
+        - **Performance**: testing responsiveness and latency under normal load
+            - often used when Service Level Agreements (SLAs) specify a level of performance a service should provide, such as time limits on latency or availability agreements
+            - confusingly, performance testing is a kind of testing that falls under the category called "Performance Testing"
+        - **Load**: measuring performance at differing loads of traffic
+            - particularly useful if your service is deployed in an auto-scaling environment in the cloud, can reveal defects in the deployment environment
+        - **Stress**: continually increasing the load of a service to capacity to identify the breaking point of the application
+- **Compatibility Testing**
+  - Testing that a feature or application works the same on different platforms, operating systems, browsers, etc
+- **Regression testing**
+  - testing done after one or more new features are implemented to check if the new feature/s broke old features
+    - one of the major benefits of automated testing is the ability to quickly perform Regression Testing
+- **Retesting**
+  - testing done after making changes to fix a defect
 - **Automated testing**
   - Not subject to human error
   - Quicker than manual testing
@@ -93,6 +140,11 @@ Acceptance Testing is a process that allows for validating the application in qu
   - Performed first in a build, so that if it fails we don't need to waste time testing more advanced features
   - e.g. for a calculator, testing that pressing the ON button causes the calculator to start: if this fails there is no point in checking its other features
   - can be thought of similar to a general health check up
+- **Sanity testing**
+  - Subset of regression testing, performed on specific feature
+  - Performs a "sanity check" to verify functionality of a new feature works as intended
+  - think of it as a smoke test for your regression testing: if your new feature/update has defects then old tests that interact with the new feature are going to fail as well
+  - can be thought of as similar to a specialized health check up
 - **Exploratory Testing**
   - Type of testing where test cases are not created in advance but instead on the fly in a White Box testing situation
   - The kind of tests to be created are determined by examining the source code and environment where the application will deploy
