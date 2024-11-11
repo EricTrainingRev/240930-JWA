@@ -1,0 +1,25 @@
+# Previous Java Questions
+- Tell me about exceptions
+- Tell me about exception handling
+- What is the throws keyword?
+- What is an abstract class?
+- What is method overloading?
+- What is a try/catch block?
+- What do you know about Java Collections?
+- What collection frameworks have you used in your project?
+- What do you know about Java?
+- What is the difference between abstract class and interface?
+- What is the difference between a static class vs a public class?
+- What are Wrapper classes?
+- What if you are not sure what exception is thrown, how can you write a try/catch block for that?
+- What is the difference between a List and a Set?
+- What happens when you add a duplicate key to a Map?
+- What happens when you add a duplicate value to a Map?
+- What happens when you add a duplicate value in a Set?
+- What is the static keyword?
+- What is the final keyword?
+- What is an interface?
+- Why would we use abstract classes and interfaces?
+- What is a constructor?
+- What does a constructor do?
+- How do we create a constant variable in Java?

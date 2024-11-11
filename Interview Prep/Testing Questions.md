@@ -1,0 +1,17 @@
+# Previous Testing Questions
+- What is the difference between BDD and TDD?
+- What is a Test Plan Document?
+- What are test scripts?
+- What is the difference between System testing and Integration testing?
+- What is Software Development Lifecycle?
+- Functional and nonfunctional testing?
+- What is the Testing defect lifecycle?
+- What are the different things needed when writing a test case?
+- What is API testing?
+- What is regression testing?
+- List different testing types
+- What is integration testing?
+- How do we test an entire backend?
+- Why would you use automation testing?
+- What is TDD?
+- What is an API?
