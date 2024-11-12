@@ -34,6 +34,7 @@ public class DAOTest {
      */
     @Before
     public void preTest(){
+        // Because only the dao is present for these tests, we are doing unit testing
         System.out.println("pretest method run");
         dao = new DAO();
     }
