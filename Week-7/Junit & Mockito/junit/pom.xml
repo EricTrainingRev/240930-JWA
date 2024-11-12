@@ -23,4 +23,45 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+                <!--
+                    The includes section tells maven what tests you want to execute: the list you
+                    include is an exclusive list: any test classes not in the "includes" section will
+                    NOT be executed
+                -->
+                    <includes>
+                        <include>**/TestSuiteRunner.java</include>
+                    </includes>
+                <!--
+                    the excludes section is the inverse of includes: any test classes in the excludes
+                    list will NOT be executed. Note that includes/excludes do cancel each other out, so
+                    it is ideal to choose one that more naturally determines what tests you want to execute
+                -->
+<!--                    <excludes>-->
+<!--                        <exclude>**/TestSuiteRunner.java</exclude>-->
+<!--                    </excludes>-->
+                </configuration>
+            </plugin>
+            <!--
+                if you want to generate an html report you can use the command
+                "mvn surefire-report:report" to execute your tests and have the report
+                generated in the target/reports directory
+             -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+                    <outputName>my-test-name</outputName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
