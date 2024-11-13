@@ -8,7 +8,7 @@ There are some benefits to this:
 - Helps prevent feature creep: by giving the developers hard targets for their work, it makes it less likely the developers will add extraneous code to the application
 - Helps blend testing and development: because test development happens first, it simplifies the process of validating that your software is working as intended. All a developer needs to do to validate their code works is to execute the tests
 
-BDD and TDD are compatable with each other:
+BDD and TDD are compatible with each other:
 1. Requirements are defined
 2. Acceptance criteria is created
 3. Tests are written to validate acceptance criteria is met

@@ -1,0 +1,2 @@
+Using mockito makes this Mock class redundant, leaving it here to give an
+example of what you could do if you did not have Mockito or another mocking framework

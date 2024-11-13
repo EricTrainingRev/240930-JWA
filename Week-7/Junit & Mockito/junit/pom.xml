@@ -21,6 +21,12 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.12.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -49,7 +55,7 @@
                 </configuration>
             </plugin>
             <!--
-                if you want to generate an html report you can use the command
+                if you want to generate a html report you can use the command
                 "mvn surefire-report:report" to execute your tests and have the report
                 generated in the target/reports directory
              -->
