@@ -6,9 +6,11 @@
 - What does sendKeys do in Selenium?
 - Do you know how to use JavaScript with Selenium?
 - What is the syntax for finding a username, password and button element and how do we verify that - the correct credentials were input?
-- Explain the syntax of instantiating the WebDriver. What does it do?
+- Explain the syntax of instantiating the WebDriver. 
+- What does the webdriver do?
 - Explain the syntax of getting the URL in Selenium?
 - Explain the various waits on Selenium.
+- What is the difference between explicit and implicit waits?
 - How do you use xpath in Selenium?
 - Where do we put the dependencies for Selenium?
 - Where do we use JavaScript in Selenium?
@@ -18,4 +20,5 @@
 - What is the best locator we should use if available?
 - What are action classes and what are they used for?
 - How to get elements with Selenium? Are there different ways to get elements?
-- How to instantiate and provide information with those elements?
+    - How to instantiate and provide information with those elements?
+- Walk me through how you would interact with a link of a shopping website.
