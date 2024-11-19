@@ -26,6 +26,7 @@ public class UserDaoImp implements UserDao {
                     return Optional.of(newUser);
                 }
             }
+            // broken sql constraints should cause SQLExceptions
         } catch (SQLException e) {
             System.out.println(e);
             throw new UserFail(e.getMessage());
