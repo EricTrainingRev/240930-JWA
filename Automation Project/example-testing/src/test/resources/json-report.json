@@ -1,38 +1,43 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-11-12T16:39:26.122Z",
-        "line": 2,
-        "name": "accessing child elements",
-        "description": "",
-        "id": "working-with-elements;accessing-child-elements",
+        "start_timestamp": "2024-11-20T15:36:07.243Z",
+        "line": 16,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 506863300,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationCharacterLimit.feature:6)\r\n",
+              "duration": 4981132200,
+              "status": "failed"
             },
-            "line": 3,
-            "name": "I am logged in",
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
             "match": {
-              "location": "com.revature.steps.GettingElements.i_am_logged_in()"
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.steps.GettingElements.i_get_an_element_with_child_elements(GettingElements.java:24)\r\n\tat ✽.I get an element with child elements(classpath:features/table-stuff.feature:4)\r\n",
-              "duration": 9000300,
-              "status": "pending"
+              "status": "skipped"
             },
-            "line": 4,
-            "name": "I get an element with child elements",
+            "line": 7,
+            "name": "The user clicks the registration button",
             "match": {
-              "location": "com.revature.steps.GettingElements.i_get_an_element_with_child_elements()"
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
             },
             "keyword": "When "
           },
@@ -40,21 +45,1360 @@
             "result": {
               "status": "skipped"
             },
-            "line": 5,
-            "name": "I should be able to access those elements",
+            "line": 8,
+            "name": "The user enters the username \"(no values)\"",
             "match": {
-              "location": "com.revature.steps.GettingElements.i_should_be_able_to_access_those_elements()"
+              "arguments": [
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 987400,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user enters the password \"(no value)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no value)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999500,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999100,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User created\" for \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 998400,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-20T15:36:12.559Z",
+        "line": 17,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationCharacterLimit.feature:6)\r\n",
+              "duration": 4778931400,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 997400,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1004200,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the username \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user enters the password \"GordonIsMyHeroForeverGoodMan11\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GordonIsMyHeroForeverGoodMan11\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User created\" for \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-20T15:36:17.422Z",
+        "line": 18,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationCharacterLimit.feature:6)\r\n",
+              "duration": 2545401400,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the username \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user enters the password \"LexLuthorIsSchemingAgainOhNo!!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LexLuthorIsSchemingAgainOhNo!!!\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"(no values)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"(no values)\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1002900,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-20T15:36:20.019Z",
+        "line": 19,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationCharacterLimit.feature:6)\r\n",
+              "duration": 4473526200,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the username \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user enters the password \"(no value)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no value)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1001400,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999100,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User created\" for \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-20T15:36:24.532Z",
+        "line": 20,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationCharacterLimit.feature:6)\r\n",
+              "duration": 2640711900,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the username \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user enters the password \"GordonIsMyHeroForeverGoodMan11\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GordonIsMyHeroForeverGoodMan11\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000700,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User created\" for \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-20T15:36:27.223Z",
+        "line": 21,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationCharacterLimit.feature:6)\r\n",
+              "duration": 4409793900,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1001100,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the username \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user enters the password \"LexLuthorIsSchemingAgainOhNo!!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LexLuthorIsSchemingAgainOhNo!!!\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3006900,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-20T15:36:31.670Z",
+        "line": 22,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationCharacterLimit.feature:6)\r\n",
+              "duration": 2664975700,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the username \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user enters the password \"(no value)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"(no value)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-20T15:36:34.362Z",
+        "line": 23,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationCharacterLimit.feature:6)\r\n",
+              "duration": 4452533300,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the username \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user enters the password \"GordonIsMyHeroForeverGoodMan11\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GordonIsMyHeroForeverGoodMan11\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1013400,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-20T15:36:38.833Z",
+        "line": 24,
+        "name": "User Registration Username/Password 30 character Limit Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a username and password that meet the character limit requirement, and if they don\u0027t their account should not be created",
+        "id": "registrationcharacterlimit;user-registration-username/password-30-character-limit-requirement-test-case;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationCharacterLimit.feature:6)\r\n",
+              "duration": 2692909200,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the username \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user enters the password \"LexLuthorIsSchemingAgainOhNo!!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LexLuthorIsSchemingAgainOhNo!!!\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Then an alert should appear saying \"User not created\" for \"JokerAndRiddlerAreAtItAgain1010\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"JokerAndRiddlerAreAtItAgain1010\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
           }
         ]
       }
     ],
-    "name": "working with elements",
+    "name": "RegistrationCharacterLimit",
     "description": "",
-    "id": "working-with-elements",
+    "id": "registrationcharacterlimit",
     "keyword": "Feature",
-    "uri": "classpath:features/table-stuff.feature",
+    "uri": "classpath:features/RegistrationCharacterLimit.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-11-20T15:36:41.559Z",
+        "line": 15,
+        "name": "Automated User Registration Unique Username Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a valid password and a unique username, and if the username is not unique their account should not be created",
+        "id": "registrationuniqueusername;automated-user-registration-unique-username-requirement-test-case;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationUniqueUsername.feature:5)\r\n",
+              "duration": 4409140900,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user enters the username \"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robin\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000300,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the password \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Then an alert should appear saying \"User created\" for \"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"Robin\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "The \"User redirected to login page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User redirected to login page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-11-20T15:36:45.998Z",
+        "line": 16,
+        "name": "Automated User Registration Unique Username Requirement Test Case",
+        "description": "\tValidating Users can open a new User account with the Planetarium when they provide a valid password and a unique username, and if the username is not unique their account should not be created",
+        "id": "registrationuniqueusername;automated-user-registration-unique-username-requirement-test-case;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d129.0.6668.90)\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.24\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [cb76f2f1809f6a22b436c25b275045bc, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\\Users\\ERICSU~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61178/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: cb76f2f1809f6a22b436c25b275045bc\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(SharedSteps.java:11)\r\n\tat ✽.The user is on the login page at url \"http://localhost:8080/\"(classpath:features/RegistrationUniqueUsername.feature:5)\r\n",
+              "duration": 2710543100,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "The user is on the login page at url \"http://localhost:8080/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://localhost:8080/\"",
+                  "offset": 37
+                }
+              ],
+              "location": "com.revature.steps.shared.SharedSteps.the_user_is_on_the_login_page_at_url(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "The user clicks the registration button",
+            "match": {
+              "location": "com.revature.steps.shared.SharedSteps.the_user_clicks_the_registration_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "The user enters the username \"Batman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "The user enters the password \"BatmanAndRobinToTheRescue20202\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BatmanAndRobinToTheRescue20202\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_enters_the_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 973500,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The user clicks the register button",
+            "match": {
+              "location": "com.revature.steps.registration.RegistrationSteps.the_user_clicks_the_register_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Then an alert should appear saying \"User not created\" for \"Batman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User not created\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"Batman\"",
+                  "offset": 58
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.then(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "The \"User remains on creation page\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User remains on creation page\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.revature.steps.registration.RegistrationSteps.the(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "RegistrationUniqueUsername",
+    "description": "",
+    "id": "registrationuniqueusername",
+    "keyword": "Feature",
+    "uri": "classpath:features/RegistrationUniqueUsername.feature",
     "tags": []
   }
 ]
