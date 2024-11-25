@@ -4,6 +4,8 @@
     - Code Quality and Analysis
     - Jenkins
   - After lecture, use that time for studying/project work
+  - noon - Sonar, Code Quality
+  - 
 - 11/26
   - Final Cumulative QC
   - Work on project and prep for presentations
