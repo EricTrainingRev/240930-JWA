@@ -5,10 +5,16 @@
     - Jenkins
   - After lecture, use that time for studying/project work
   - noon - Sonar, Code Quality
-  - 
+  - Take lunch and then group work
+    - Study with fellow trainees
+    - Work on project
+    - Set up Teams calls amongst yourselves (let me know if you need help)
+    - I will be in the main call if any questions came up
+    - I will also be uploading questions on DevOps for studying
 - 11/26
   - Final Cumulative QC
   - Work on project and prep for presentations
+  - Code Freeze Tomorrow
 - 11/27
   - Final Project Presentations
-    - aim for around 10 minutes
+    - aim for around 10 minutes each 
